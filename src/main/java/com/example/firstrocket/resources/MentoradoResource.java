@@ -29,7 +29,7 @@ public class MentoradoResource {
     public ResponseEntity<String> cadastrarMentorado(@Valid @RequestBody MentoradoNewDTO mentoradoObj) {
         Mentorado mentorado = service.fromDTO(mentoradoObj);
 
-        mentorado = service.insert(mentorado);
+        service.insert(mentorado);
 
         return new ResponseEntity<>("Mentorado inserido com sucesso!", HttpStatus.CREATED);
     }

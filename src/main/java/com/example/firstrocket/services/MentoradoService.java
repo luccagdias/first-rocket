@@ -16,8 +16,8 @@ public class MentoradoService {
     MentoradoRepository repo;
 
     @Transactional
-    public Mentorado insert(Mentorado mentorado) {
-        return repo.save(mentorado);
+    public void insert(Mentorado mentorado) {
+        repo.save(mentorado);
     }
 
     public List<Mentorado> findAll() {
