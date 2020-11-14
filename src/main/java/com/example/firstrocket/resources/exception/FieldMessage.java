@@ -1,4 +1,4 @@
-package com.example.firstrocket.resource.exception;
+package com.example.firstrocket.resources.exception;
 
 public class FieldMessage {
     private static final long serialVersionUID = 1L;

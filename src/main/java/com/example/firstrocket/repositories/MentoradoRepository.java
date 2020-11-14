@@ -1,4 +1,4 @@
-package com.example.firstrocket.repository;
+package com.example.firstrocket.repositories;
 
 import com.example.firstrocket.domain.Mentorado;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,4 +1,4 @@
-package com.example.firstrocket.resource.exception;
+package com.example.firstrocket.resources.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

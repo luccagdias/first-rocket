@@ -11,7 +11,7 @@ public class MentoradoNewDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @NotEmpty(message = "Preenchimento obrigatório!")
-    @Length(min = 5, max = 120, message = "O tamanho deve ser entre 5 ee 120 caracteres!")
+    @Length(min = 5, max = 120, message = "O tamanho deve ser entre 5 e 120 caracteres!")
     private String nomeCompleto;
 
     @NotEmpty(message = "Preenchimento obrigatório!")
