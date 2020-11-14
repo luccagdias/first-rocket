@@ -18,6 +18,7 @@ public class MentoradoResource {
     @Autowired
     MentoradoService service;
 
+    @CrossOrigin
     @GetMapping
     public ResponseEntity<List<Mentorado>> listarMendorados() {
         List<Mentorado> mentorados = service.findAll();
@@ -25,6 +26,7 @@ public class MentoradoResource {
         return ResponseEntity.ok().body(mentorados);
     }
 
+    @CrossOrigin
     @PostMapping
     public ResponseEntity<String> cadastrarMentorado(@Valid @RequestBody MentoradoNewDTO mentoradoObj) {
         Mentorado mentorado = service.fromDTO(mentoradoObj);
