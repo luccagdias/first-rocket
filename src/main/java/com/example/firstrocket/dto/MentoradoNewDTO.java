@@ -1,11 +1,13 @@
 package com.example.firstrocket.dto;
 
+import com.example.firstrocket.services.validation.MentoradoInsert;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 
+@MentoradoInsert
 public class MentoradoNewDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
