@@ -16,8 +16,8 @@ public class MentoradoService {
     MentoradoRepository repo;
 
     @Transactional
-    public void insert(Mentorado mentorado) {
-        repo.save(mentorado);
+    public Mentorado insert(Mentorado mentorado) {
+        return repo.save(mentorado);
     }
 
     public List<Mentorado> findAll() {
@@ -25,6 +25,6 @@ public class MentoradoService {
     }
 
     public Mentorado fromDTO(MentoradoNewDTO objDto) {
-        return new Mentorado(null, objDto.getNomeCompleto(), objDto.getEmail(), objDto.getCpf());
+        return new Mentorado(null, objDto.getNomeCompleto(), objDto.getCpf(), objDto.getEmail());
     }
 }
