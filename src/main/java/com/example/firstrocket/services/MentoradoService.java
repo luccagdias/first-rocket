@@ -6,6 +6,7 @@ import com.example.firstrocket.repositories.MentoradoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -14,6 +15,7 @@ public class MentoradoService {
     @Autowired
     MentoradoRepository repo;
 
+    @Transactional
     public void insert(Mentorado mentorado) {
         repo.save(mentorado);
     }
