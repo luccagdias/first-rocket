@@ -25,6 +25,6 @@ public class MentoradoService {
     }
 
     public Mentorado fromDTO(MentoradoNewDTO objDto) {
-        return new Mentorado(null, objDto.getNomeCompleto(), objDto.getCpf(), objDto.getEmail());
+        return new Mentorado(null, objDto.getNomeCompleto(), objDto.getCpf(), objDto.getEmail(), objDto.getSenha(), objDto.getAgendamentos(), objDto.getAutorizado());
     }
 }

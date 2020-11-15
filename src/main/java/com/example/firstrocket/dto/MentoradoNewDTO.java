@@ -23,6 +23,13 @@ public class MentoradoNewDTO implements Serializable {
     @Email(message = "E-mail inválido!")
     private String email;
 
+    @NotEmpty(message = "Preenchimento obrigatório!")
+    private String senha;
+
+    private Integer agendamentos;
+
+    private String autorizado;
+
     public MentoradoNewDTO() {
     }
 
@@ -48,5 +55,29 @@ public class MentoradoNewDTO implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public Integer getAgendamentos() {
+        return agendamentos;
+    }
+
+    public void setAgendamentos(Integer agendamentos) {
+        this.agendamentos = agendamentos;
+    }
+
+    public String getAutorizado() {
+        return autorizado;
+    }
+
+    public void setAutorizado(String autorizado) {
+        this.autorizado = autorizado;
     }
 }

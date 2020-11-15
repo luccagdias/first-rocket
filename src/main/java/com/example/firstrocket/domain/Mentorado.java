@@ -17,15 +17,21 @@ public class Mentorado implements Serializable {
     private String nomeCompleto;
     private String cpf;
     private String email;
+    private String senha;
+    private Integer agendamentos;
+    private String autorizado;
 
     public Mentorado() {
     }
 
-    public Mentorado(Integer id, String nomeCompleto, String cpf, String email) {
+    public Mentorado(Integer id, String nomeCompleto, String cpf, String email, String senha, Integer agendamentos, String autorizado) {
         this.id = id;
         this.nomeCompleto = nomeCompleto;
         this.cpf = cpf;
         this.email = email;
+        this.senha = senha;
+        this.agendamentos = agendamentos;
+        this.autorizado = autorizado;
     }
 
     public Integer getId() {
@@ -54,5 +60,29 @@ public class Mentorado implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public Integer getAgendamentos() {
+        return agendamentos;
+    }
+
+    public void setAgendamentos(Integer agendamentos) {
+        this.agendamentos = agendamentos;
+    }
+
+    public String getAutorizado() {
+        return autorizado;
+    }
+
+    public void setAutorizado(String autorizado) {
+        this.autorizado = autorizado;
     }
 }
