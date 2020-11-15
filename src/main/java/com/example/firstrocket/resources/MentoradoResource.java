@@ -24,7 +24,7 @@ public class MentoradoResource {
     public ResponseEntity<List<MentoradoDTO>> listarMendorados() {
         List<Mentorado> mentorados = service.findAll();
 
-        List<MentoradoDTO> mentoradoDTOs = mentorados.stream().map(obj -> new MentoradoDTO(obj).collect(Collectors.toList()));
+        List<MentoradoDTO> mentoradoDTOs = mentorados.stream().map(obj -> new MentoradoDTO(obj)).collect(Collectors.toList());
 
         return ResponseEntity.ok().body(mentoradoDTOs);
     }
