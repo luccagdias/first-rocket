@@ -9,7 +9,7 @@ public class MentoriaDTO implements Serializable {
 
     private Integer idMentor;
     private Integer idMentorado;
-    private Date dataEHora;
+    private String dataEHora;
     private String link;
 
     public MentoriaDTO() {
@@ -31,11 +31,11 @@ public class MentoriaDTO implements Serializable {
         this.idMentorado = idMentorado;
     }
 
-    public Date getDataEHora() {
+    public String getDataEHora() {
         return dataEHora;
     }
 
-    public void setDataEHora(Date dataEHora) {
+    public void setDataEHora(String dataEHora) {
         this.dataEHora = dataEHora;
     }
 

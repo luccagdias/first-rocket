@@ -17,13 +17,13 @@ public class Mentoria implements Serializable {
     private Integer id;
     private Integer idMentor;
     private Integer idMentorado;
-    private Date dataEHora;
+    private String dataEHora;
     private String link;
 
     public Mentoria() {
     }
 
-    public Mentoria(Integer id, Integer idMentor, Integer idMentorado, Date dataEHora, String link) {
+    public Mentoria(Integer id, Integer idMentor, Integer idMentorado, String dataEHora, String link) {
         this.id = id;
         this.idMentor = idMentor;
         this.idMentorado = idMentorado;
@@ -55,11 +55,11 @@ public class Mentoria implements Serializable {
         this.idMentorado = idMentorado;
     }
 
-    public Date getDataEHora() {
+    public String getDataEHora() {
         return dataEHora;
     }
 
-    public void setDataEHora(Date dataEHora) {
+    public void setDataEHora(String dataEHora) {
         this.dataEHora = dataEHora;
     }
 
