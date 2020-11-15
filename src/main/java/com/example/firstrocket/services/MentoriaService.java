@@ -5,10 +5,12 @@ import com.example.firstrocket.domain.Mentoria;
 import com.example.firstrocket.dto.MentoriaDTO;
 import com.example.firstrocket.repositories.MentoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
 
+@Service
 public class MentoriaService {
 
     @Autowired

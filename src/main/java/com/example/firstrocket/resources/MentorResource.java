@@ -19,7 +19,7 @@ public class MentorResource {
     MentorService service;
 
     @GetMapping
-    public ResponseEntity<List<Mentor>> listarMendores() {
+    public ResponseEntity<List<Mentor>> listarMentores() {
         List<Mentor> mentores = service.findAll();
 
         return ResponseEntity.ok().body(mentores);
