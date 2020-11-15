@@ -7,12 +7,21 @@ public class MentoriaDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    private Integer id;
     private Integer idMentor;
     private Integer idMentorado;
     private String dataEHora;
     private String link;
 
     public MentoriaDTO() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Integer getIdMentor() {
