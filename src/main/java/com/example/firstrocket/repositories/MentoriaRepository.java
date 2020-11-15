@@ -8,6 +8,4 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public interface MentoriaRepository extends JpaRepository<Mentoria, Integer> {
 
-    @Transactional(readOnly = true)
-    Mentoria findByEmail(String email);
 }
