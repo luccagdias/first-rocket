@@ -27,7 +27,7 @@ public class MentorNewDTO implements Serializable {
     @NotEmpty(message = "Preenchimento obrigatório!")
     private String cpf;
 
-    private List<Date> horarios;
+    private String horarios;
 
     public MentorNewDTO() {
     }
@@ -64,11 +64,11 @@ public class MentorNewDTO implements Serializable {
         this.cpf = cpf;
     }
 
-    public List<Date> getHorarios() {
+    public String getHorarios() {
         return horarios;
     }
 
-    public void setHorarios(List<Date> horarios) {
+    public void setHorarios(String horarios) {
         this.horarios = horarios;
     }
 }

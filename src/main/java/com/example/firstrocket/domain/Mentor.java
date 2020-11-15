@@ -20,17 +20,18 @@ public class Mentor implements Serializable {
     private String sobre;
     private String email;
     private String cpf;
-    //private List<Date> horarios;
+    private String horarios;
 
     public Mentor() {
     }
 
-    public Mentor(Integer id, String nomeCompleto, String sobre, String email, String cpf, List<Date> horarios) {
+    public Mentor(Integer id, String nomeCompleto, String sobre, String email, String cpf, String horarios) {
         this.id = id;
         this.nomeCompleto = nomeCompleto;
         this.sobre = sobre;
         this.email = email;
         this.cpf = cpf;
+        this.horarios = horarios;
     }
 
     public Integer getId() {
@@ -71,5 +72,13 @@ public class Mentor implements Serializable {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public String getHorarios() {
+        return horarios;
+    }
+
+    public void setHorarios(String horarios) {
+        this.horarios = horarios;
     }
 }
