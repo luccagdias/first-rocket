@@ -1,6 +1,7 @@
 package com.example.firstrocket.resources;
 
 import com.example.firstrocket.domain.Mentorado;
+import com.example.firstrocket.dto.MentoradoDTO;
 import com.example.firstrocket.dto.MentoradoNewDTO;
 import com.example.firstrocket.services.MentoradoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/mentorado")
@@ -19,10 +21,12 @@ public class MentoradoResource {
     MentoradoService service;
 
     @GetMapping
-    public ResponseEntity<List<Mentorado>> listarMendorados() {
+    public ResponseEntity<List<MentoradoDTO>> listarMendorados() {
         List<Mentorado> mentorados = service.findAll();
 
-        return ResponseEntity.ok().body(mentorados);
+        List<MentoradoDTO> mentoradoDTOs = mentorados.stream().map(obj -> new MentoradoDTO(obj).collect(Collectors.toList()));
+
+        return ResponseEntity.ok().body(mentoradoDTOs);
     }
 
     @PostMapping
